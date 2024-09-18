@@ -11,11 +11,10 @@ import java.util.ArrayList;
 
 public class Testing {
 
-    public static void test(Class cl) throws MyException, InvocationTargetException, IllegalAccessException {
+    public static void test(Class<?> cl) throws MyException, InvocationTargetException, IllegalAccessException {
         Method[] methods = cl.getDeclaredMethods();
         if (cl.isAnnotationPresent(Disabled.class)) {
-            //System.out.println(cl.getAnnotation(Disabled.class).explane());
-            System.out.println("Методы класса " + cl.getSimpleName() + " отключены (" + Methods.class.getAnnotation(Disabled.class).explane() + ")");
+            System.out.println(cl.getAnnotation(Disabled.class).explane());
             return;
         }
 

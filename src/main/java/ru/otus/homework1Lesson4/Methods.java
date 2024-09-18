@@ -4,7 +4,6 @@ package ru.otus.homework1Lesson4;
  * @author Sergei on 15.09.2024 14:40.
  * @project homework1Lesson4
  */
-
 public class Methods {
 
     @AfterSuite
@@ -15,6 +14,7 @@ public class Methods {
             System.out.println("Ошибка при выполнении теста termMethod");
         }
     }
+
     @Disabled(explane = "Сделать вручную")
     @Test(priority = 2)
     public static void testMethod1() {
