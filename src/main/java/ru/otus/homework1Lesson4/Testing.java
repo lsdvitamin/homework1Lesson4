@@ -72,5 +72,10 @@ public class Testing {
             System.out.println("Тест " + met.getName() + " отключен (" + met.getAnnotation(Disabled.class).explane() + ")");
         }
 
+        System.out.println("\nВсего тестов: " + (Methods.successfullyTest + Methods.badTest + methodsWithDisableAnn.size()) + "\n" +
+                "Успешно выполнено: " + Methods.successfullyTest + "\n" +
+                "Отключен: " + methodsWithDisableAnn.size() + "\n" +
+                "Упало: " + Methods.badTest);
+
     }
 }
