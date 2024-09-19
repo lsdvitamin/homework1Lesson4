@@ -59,7 +59,6 @@ public class Testing {
         for (int i = 10; i > 0; i--) {
             for (Method met : methodsWithOnlyTestAnn) {
                 if (met.getAnnotation(Test.class).priority() == i) {
-                    //System.out.println(met.getName());
                     met.invoke(null);
                 }
             }
