@@ -1,4 +1,4 @@
-package ru.otus.homework1Lesson4;
+package ru.otus.homework1.lesson4;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,7 +12,7 @@ public class Main {
         System.out.println("Start tests\n");
         try {
             Testing.test(Methods.class);
-        } catch (MyException e) {
+        } catch (FrameworkReflectionAPIExceptions e) {
             System.out.println(e.getMessage());
             System.out.println("Продолжение выполнения тестов невозможно");
         } catch (InvocationTargetException e) {
