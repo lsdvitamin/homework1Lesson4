@@ -7,5 +7,6 @@ package ru.otus.homework1.lesson4;
 public class FrameworkReflectionAPIExceptions extends Exception {
     public FrameworkReflectionAPIExceptions(String message) {
         super(message);
+        System.out.println(message);
     }
 }

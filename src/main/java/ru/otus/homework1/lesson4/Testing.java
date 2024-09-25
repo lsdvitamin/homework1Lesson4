@@ -69,9 +69,13 @@ public class Testing {
             for (Object lst : entry.getValue()) {
                 Method m = (Method) lst;
                 try {
-                    m.invoke(null);
-                    System.out.print(" (priority = " + entry.getKey() + ")\n");
-                    successfullyTest++;
+                    if (entry.getKey() > 0 && entry.getKey() < 11) {
+                        m.invoke(null);
+                        System.out.print(" (priority = " + entry.getKey() + ")\n");
+                        successfullyTest++;
+                    } else {
+                        throw new FrameworkReflectionAPIExceptions("Приоритет должен быть в диапазоне 1-10 включительно");
+                    }
                 } catch (Exception e) {
                     System.out.println("Ошибка при выполнении теста " + m.getName());
                     badTest++;

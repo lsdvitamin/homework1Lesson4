@@ -17,7 +17,7 @@ public class Methods {
         System.out.print("Test testMethod1 was completed");
     }
 
-    @Test(priority = 6)
+    @Test(priority = 12)
     public static void testMethod2() {
         System.out.print("Test testMethod2 was completed");
     }
